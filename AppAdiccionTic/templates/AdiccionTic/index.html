@@ -1,0 +1,11 @@
+{% if todasNoticias %}
+<ul> 
+	{% for noticia in todasNoticias %}
+	<li> <a href="/adicciontic/{{ noticia.id }}/">{{ noticia.Titulo }}</a></li>
+	{% endfor %}
+	
+</ul>
+{% else %}
+	<h3> No hay ninguna noticia </h3>
+
+{% endif %}
