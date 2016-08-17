@@ -1,7 +1,8 @@
 {% if todasNoticias %}
 <ul> 
+	<h3> Aquí están todas mis noticias </h3>
 	{% for noticia in todasNoticias %}
-	<li> <a href="/adicciontic/{{ noticia.id }}/">{{ noticia.Titulo }}</a></li>
+	<li> <a href="{% url 'detalle' noticia.id %}">{{ noticia.Titulo }}</a></li>
 	{% endfor %}
 	
 </ul>

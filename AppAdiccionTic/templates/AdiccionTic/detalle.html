@@ -1,0 +1,22 @@
+
+{% if noticia.Estado == "Publicado" %}
+
+<h1> Aquí el detalle de la Noticia </h1>
+
+	<h1>{{ noticia.Titulo }}</h1>
+	<h2> {{ noticia.Subtitulo }}
+
+	<img src="{{ noticia.Imagen }}">
+	<h2> {{ noticia.SubtituloImag }} </h3>
+	<h4> {{ noticia.Cuerpo }} </h4>
+	<h6> {{ noticia.Actualizado }} </h6>
+	{% if noticia.IncluirVideo == True %}
+		<iframe width="640" height="360" src="{{ noticia.CodVideo }}" frameborder="0" allowfullscreen></iframe>
+	{% endif %}
+	<h6> Tags: Arreglar {{ noticia.Tags }} </h6>
+	<h6> Redactor Noticia: {{ noticia.usuario }} </h6>
+
+{% else %}
+	<h3> No hay ninguna noticia </h3>
+
+{% endif %}
