@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %} <!-- en los form cambiamos .as_p por |crispy -->
+{% load staticfiles %}
+
+{% block head_title %}Bienvenido | {{ block.super }} {% endblock %}
+
+<!-- esto lo sustituímos con un nuevo css con .text-edit{} 
+en custom.css y lo incluímos en el archivo 
+<style>
+{% block style %}
+	.text-edit {
+		text-align: center;
+		color: black;
+	}
+{% endblock %}
+</style>
+-->
+<!--
+{% block jumbotron_ %}
+{{ block.super }}
+{% endblock %}
+-->
+
+      
+
+{% block jumbotron %}
+<div class="jumbotron">
+<div class="container">
+	<div class="row">
+		<div class='col-sm-6'>
+			<h1>Adicción TIC</h1>
+			<p class='lead '></p>
+			<p>
+				<a class="btn btn-lg btn-primary" href="https://github.com/magvugr/AT" role="button">
+				<span class="fa-stack fa-lg">
+	  			<!--<i class="fa fa-spinner fa-stack-2x fa-pulse"></i>-->
+	  			<i class="fa fa-github fa-stack-2x"></i>
+			</span> ReadMe GitHub &raquo;</a>
+				
+
+			</p>
+		</div>
+
+		<div class='col-sm-6'>
+			<iframe width="420" height="315" src="https://www.youtube.com/embed/b0Mqccf1x6Y" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
